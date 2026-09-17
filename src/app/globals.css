@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #F7F2E6;
+    --paper-card: #FFFEFA;
+    --ink: #202A42;
+    --ink-soft: #656B7E;
+    --ink-faint: #9A947F;
+    --line: #E6DDC6;
+    --marigold: #E0A72E;
+    --marigold-deep: #B98421;
+    --sage: #4C7A55;
+    --amber: #C98A1F;
+    --brick: #B4503F;
+    --gray: #8B8577;
+  }
+
+  .dark {
+    --paper: #171A23;
+    --paper-card: #1F2330;
+    --ink: #EFEAE0;
+    --ink-soft: #B3AF9E;
+    --ink-faint: #7D7A6E;
+    --line: #333747;
+    --marigold: #E7B84A;
+    --marigold-deep: #F3CB6E;
+    --sage: #7FAE87;
+    --amber: #D9A64B;
+    --brick: #D98776;
+    --gray: #8D8977;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    /* Manrope will be applied via font-sans utility if set up, or explicitly here */
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
+  
+  /* Scrollbar hiding for main view */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
