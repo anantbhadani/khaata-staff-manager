@@ -38,9 +38,7 @@ next-env.d.ts
  # Khaata Specific
 *.apk
 DEVELOPER_GUIDE.md
-developer_note.md
-public/logo.jpg
-public/thumbnail.jpg  
+developer_note.md  
 # IDEs
 .idea/
 .vscode/
