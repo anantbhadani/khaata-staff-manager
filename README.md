@@ -76,3 +76,15 @@ npx cap sync android
 npx cap open android
 ```
 *(Note: If building on Windows with special characters in your path, use the Gradle wrapper directly from a sanitized directory).*
+
+### Deploying to GitHub Pages
+
+You can host the Web/PWA version of Khaata directly on GitHub Pages for free! This allows users to access the app from any browser, and their data will still be stored securely in their local device's IndexedDB.
+
+1. **Configure your Repository:** Go to your repository settings on GitHub. Under **Pages** > **Build and deployment**, set the **Source** to **GitHub Actions**.
+2. **Push to Main:** The repository includes a pre-configured GitHub Actions workflow (`.github/workflows/deploy.yml`). Pushing any changes to the `main` branch will automatically trigger a deployment.
+3. **Manual Trigger:** You can also trigger the deployment manually by going to the **Actions** tab on GitHub, selecting "Deploy Next.js site to Pages", and clicking "Run workflow".
+4. **Live URL:** Once the action completes, your app will be live at:
+   `https://anantbhadani.github.io/khaata-staff-manager/`
+
+*(Note: The GitHub Pages version is a standard Web App / PWA distribution. The Android APK must still be built locally via Android Studio as described above).*

@@ -41,3 +41,6 @@ DEVELOPER_GUIDE.md
 developer_note.md
 public/logo.jpg
 public/thumbnail.jpg  
+# IDEs
+.idea/
+.vscode/

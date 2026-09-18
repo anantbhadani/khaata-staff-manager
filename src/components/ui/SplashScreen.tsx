@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import logoSrc from '../../../public/logo.jpg';
 
 export function SplashScreen() {
   const [stage, setStage] = useState<'intro' | 'reveal' | 'done'>('intro');
@@ -28,7 +30,7 @@ export function SplashScreen() {
     >
       <div className={`relative w-[130px] h-[130px] rounded-[30px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_40px_rgba(224,167,46,0.2)] transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${stage === 'intro' ? 'scale-100 opacity-100' : 'scale-[0.2] opacity-0'}`}>
         <div className="absolute inset-0 bg-gradient-to-tr from-marigold/20 to-transparent mix-blend-overlay pointer-events-none" />
-        <img src="/logo.jpg" alt="Khaata Logo" className="w-full h-full object-cover" />
+        <Image src={logoSrc} alt="Khaata Logo" className="w-full h-full object-cover" unoptimized />
       </div>
     </div>
   );
